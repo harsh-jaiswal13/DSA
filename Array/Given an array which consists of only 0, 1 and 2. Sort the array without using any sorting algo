@@ -1,0 +1,32 @@
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	
+	
+    int a[]={0,0,0,0,0,1,1,2,0,1,1,2,2,0,1,1,2,0,1,2,0,1};
+	int n=sizeof(a)/sizeof(a[0]);
+	int count=n;
+	cout<<"length of array="<<n<<endl;
+	int i,j,k;
+	i=0;j=0;k=0;
+	while(count--)
+	{
+	  if(a[count]==0){i++;}
+	  if(a[count]==1){j++;}
+	  if(a[count]==2){k++;}
+	  
+	}
+	cout<<i<<" "<<j<<" "<<k<<" "<<endl;
+
+	int t=0;
+	
+	while(i-- && t<n)
+	{ a[t]=0;cout<<a[t]<<" ";t++;}
+    while(j-- && t<n)
+	{ a[t]=1;cout<<a[t]<<" ";t++;}
+    while(k-- && t<n)
+	{ a[t]=2;cout<<a[t]<<" ";t++;}
+	return 0;
+}
