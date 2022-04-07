@@ -25,7 +25,7 @@ bool substring(string s,char c,int n)
 int main() {
     
     
-    string in="geeksforgeeks";
+    string in="raceare";
     string temp=in;
     string letters="";
     int n=in.length();
