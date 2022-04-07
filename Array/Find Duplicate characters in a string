@@ -1,0 +1,54 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+int count(string s,char t,int n)
+{   int e=0;
+    while(n--)
+    {
+        if(s[n]==t)e++;
+    }
+    return e;
+}
+
+
+bool substring(string s,char c,int n)
+{
+  while(n--)
+  {
+      if(s[n]==c)return 1;
+  }
+  return 0;
+}
+
+
+int main() {
+    
+    
+    string in="geeksforgeeks";
+    string temp=in;
+    string letters="";
+    int n=in.length();
+    
+    
+
+    for(int i=0;i<n;i++)
+        {    
+          char v=in[i];
+          if(!substring(letters,v,letters.length())) letters+=v;
+        }
+
+    for(int i=0;i<letters.length();i++)
+        {  
+            int r=count(in,letters[i],n);
+            if(r>1){
+                cout<<"count["<<letters[i]<<"]= "<<r<<endl;
+            }
+            
+        }
+        
+    cout<<letters;    
+
+    return 0;
+    
+}
