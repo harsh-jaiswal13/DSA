@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    
+    string a,b,c,temp;
+    cin>>a;
+    cin>>b;
+    cin>>temp;
+    c=a+b;
+    
+    if(temp.length()!=c.length())
+        {cout<<"false1";return 0;}
+    
+    for(int i=0;i<c.length();i++)
+        {
+            if(!(temp.find(c[i])+1))
+                {  cout<<"false shuffle"<<endl<<c[i];
+                   return 0;
+                }
+        }
+    cout<<"Trues shuffle";
+    
+	return 0;
+}
