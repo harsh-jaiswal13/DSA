@@ -1,0 +1,43 @@
+//Rearrange array such that arr[i] >= arr[j] if i is even and arr[i]<=arr[j] if i is odd and j < i
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+// initialise with sorted array 
+
+int a[] = {1, 2, 3, 4, 5, 6, 7,8};
+int b[8]={0};
+int n=sizeof(a)/sizeof(a[0]);
+int i,j,p,q;
+i=0;q=0;
+j=n-1;p=n-1;
+
+int t=n/2;
+cout<<"t="<<t<<" n="<<n<<endl;
+
+while(t--)
+{
+    
+   b[j]=a[p];
+   b[j-1]=a[q];
+   
+   // How index are switching
+   cout<<"j="<<j<<" p="<<p<<" j-1="<<j-1<<" q="<<q<<endl;
+   
+   i++;p--;q++;
+   j-=2;
+   
+   if(p==q){b[j]=a[q];}
+   
+}
+//print array
+for(int i=0;i<n;i++)
+{
+    cout<<b[i]<<" ";
+}
+
+
+	return 0;
+}
