@@ -1,0 +1,40 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+   int a[]={5,4,2,3,1,0};
+   int n=6;
+   
+   int t=1;
+   
+  
+   while(t<n)
+   {
+        for(int j=0;j<t;j++)
+            {
+                if(a[j]>a[t])
+                {
+                    int temp=a[j];
+                    a[j]=a[t];
+                    a[t]=temp;
+                }
+            }
+        t++;            
+   }
+   
+  for(int i=0;i<n;i++)
+  {
+      cout<<a[i]<<" ";
+  }
+   
+   
+   
+   
+   
+   
+
+    // your code goes here
+	return 0;
+}
